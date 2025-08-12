@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 # Lista para armazenar os registros
 dados = []
@@ -39,8 +40,10 @@ while True:
         "Valor Total (R$)": valor_total
     })
     
+    os.system("cls")
     df = pd.DataFrame(dados)
     print("\n=== Registro de Vendas ===")
     print(df.to_string(index=False))
+    input("\nPressione Enter para continuar...")
 
 print("\nPrograma encerrado!")
